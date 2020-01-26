@@ -4,8 +4,10 @@ services:
 
 before_install:
   - docker build -t pn/react-docker .
+#   - docker build -f Dockerfile.dev -t pn/react-docker .
 
-# script:
+script:
+  - docker run pn/react-docker
 #   - docker run -e CI=true pn/react-docker npm run test
 
 deploy:
